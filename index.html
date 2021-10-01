@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -23,7 +24,7 @@
     <title>Trabajo 2 Grafos</title>
   </head>
 
-  <body>
+  <body style="background-color:#59CDFE;">
     <div class="text-center my-3">
       <h1 class="fs-1">Grafos Automatas AFD & AFND</h1>
     </div>
@@ -42,17 +43,9 @@
           </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link link-success active" href="#">
-                Integrates
+              <a class="nav-link link-success active" href="./Integrantes.html">
+                Integrantes
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-success active" href="#">
-                Instrucciones
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-success active">Proyecto</a>
             </li>
           </ul>
         </nav>
@@ -62,6 +55,9 @@
         <h2 class="my-3 text-center fs-2">
           Simula el comportamiento de un AFD y UN AFND
         </h2>
+        <h3 class="my-3 text-center fs-2">
+          Intrucciones:
+        </h3>
         <p class="font-monospace">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab nisi
           accusantium, vero, maiores unde veritatis sapiente et quisquam
@@ -81,11 +77,11 @@
         <form>
           <div class="datosautomatas_1">
             <label for="Alfabeto">Alfabeto(Σ)</label>
-            <input type="text" value="0,1" id="alfatext" />
+            <input style="background-color:#59CDFE;" type="text" value="0,1" id="alfatext" />
             <label for="Estado_inicial">Estado inicial</label>
-            <input type="text" value="q0" id="estadoi" />
+            <input style="background-color:#59CDFE;" type="text" value="q0" id="estadoi" />
             <label for="Estado_final">Estado final</label>
-            <input type="text" value="q1" id="estadof" />
+            <input style="background-color:#59CDFE;" type="text" value="q1" id="estadof" />
           </div>
           <div class="datosautomatas_2">
             <h4>TRANSICIONES</h4>
@@ -95,7 +91,7 @@
               id="campo_transiciones"
               rows="5"
               class="campo_texto"
-              style="margin-top: 0px; margin-bottom: 0px; height: 100px"
+              style="background-color:#59CDFE; margin-top: 0px; margin-bottom: 0px; height: 100px"
             >
 q0,0,q0
 q0,1,q1
@@ -105,7 +101,7 @@ q1,0,q1</textarea
           </div>
           <div>
             <label for="Cadena">Cadena</label>
-            <input type="text" id="cadena" value="01011101101" />
+            <input style="background-color:#59CDFE;" type="text" id="cadena" value="01011101101" />
             <input type="submit" value="SIMULAR" class="btn btn-dark" />
           </div>
         </form>
