@@ -12,8 +12,8 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./img/utemLogo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="shortcut icon" href="./assets/img/utemLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Trabajo 2 Grafos</title>
   </head>
 
@@ -29,7 +29,7 @@
         <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
           <div class="container-fluid">
             <img
-              src="./img/utemLogo.png"
+              src="./assets/img/utemLogo.png"
               alt="logo-utem"
               class="d-inline-block align-text-top"
               width="50"
@@ -169,20 +169,20 @@
             <h4>AFD o AFND</h4>
             <input
               type="radio"
-              id="AFD"
+              id="AFD2"
               name="tipo_automata"
               value="AFD"
               class="form-check-input"
             />
-            <label for="AFD">AFD</label><br />
+            <label for="AFD2">AFD</label><br />
             <input
               type="radio"
-              id="AFND"
+              id="AFND2"
               name="tipo_automata"
               value="AFND"
               class="form-check-input"
             />
-            <label for="AFND">AFND</label><br />
+            <label for="AFND2">AFND</label><br />
             <h4>Cadena</h4>
             <input
               type="text"
@@ -211,6 +211,6 @@
       </div>
     </div>
     <!--Fin container-->
-    <script src="./js/index.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
