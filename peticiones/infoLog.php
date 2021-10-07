@@ -4,10 +4,11 @@
   include '../models/Log.php'; //?importacion del modelo de los Logs
   
   $formulario = json_decode(file_get_contents('php://input'), true); //? Recibir datos en php enviados desde js
+  $directorio = '../logs';
   
   if($formulario['afd']){
-      if(!is_dir('../logs')){ //? Comprobar si existe el directorio de logs, si no existe lo crea
-        mkdir('../logs');
+      if(!is_dir($directorio)){ //? Comprobar si existe el directorio de logs, si no existe lo crea
+        mkdir($directorio);
       }
 
       //! Este codigo podria pasarse a una funcion para evitar duplicidad o para tener un codigo mas limpio
@@ -25,8 +26,8 @@
       $log->writeline('Info', implode($mensaje));
       $log->close();
   }else{
-      if(!is_dir('../logs')){
-          mkdir('../logs');
+      if(!is_dir($directorio)){
+          mkdir($directorio);
       }
       $log = new Log('../logs/info.log');
       $mensaje = array(
