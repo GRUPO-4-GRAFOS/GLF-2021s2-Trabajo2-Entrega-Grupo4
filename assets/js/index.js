@@ -124,32 +124,32 @@ const validaciones = (
   const msg = 'El usuario no ha mandado el campo';
 
   if (alfabeto === '') {
-    peticionError(msg, 'alfabeto');
+    peticionWarning(msg, 'alfabeto');
     alert('El campo alfabeto es requerido');
     return false;
   }
   if (estadoInicial === '') {
-    peticionError(msg, 'Estado Inicial');
+    peticionWarning(msg, 'Estado Inicial');
     alert('El campo Estado Inicial es requerido');
     return false;
   }
   if (estadoFinal === '') {
-    peticionError(msg, 'Estado Final');
+    peticionWarning(msg, 'Estado Final');
     alert('El campo Estado Final es requerido');
     return false;
   }
   if (transiciones === '') {
-    peticionError(msg, 'transiciones');
+    peticionWarning(msg, 'transiciones');
     alert('El campo Transiciones es requerido');
     return false;
   }
   if (afd === false && afnd === false) {
-    peticionError(msg, 'AFD o AFND');
+    peticionWarning(msg, 'AFD o AFND');
     alert('por favor selecciones una opcion: AFD o AFND');
     return false;
   }
   if (cadena === '') {
-    peticionError(msg, 'Cadenea');
+    peticionWarning(msg, 'Cadenea');
     alert('El campo Cadena es requerido');
     return false;
   }
@@ -158,7 +158,7 @@ const validaciones = (
 };
 
 //* Peticion para crear un log de tipo warning  cuando el usuario, no ingrese un valor
-const peticionError = async (msg, campo) => {
+const peticionWarning = async (msg, campo) => {
   const data = {
     msg,
     campo,
