@@ -10,75 +10,93 @@ btnAutomata1.addEventListener('click', async event => {
   const alfabeto = document.querySelectorAll('#campo_alfabeto')[0]; //? Selecionar campos individuales en forma de array
   const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[0];
   const estadoFinal = document.querySelectorAll('#campo_estadoFinal')[0];
-  const transiciones = document.querySelectorAll('#campo_transiciones')[0];
+  const estadoBase = document.querySelectorAll('#estado_Inicial')[0];
+  const simbolo = document.querySelectorAll('#simbolo')[0];
+  const estadoLlegada = document.querySelectorAll('#estado_final')[0];
   const afd = document.querySelector('#AFD');
   const afnd = document.querySelector('#AFND');
-  const cadena = document.querySelectorAll('#Cadena')[0];
 
   const ejecutar = await formulario(
     alfabeto,
     estadoInicial,
     estadoFinal,
-    transiciones,
+    estadoBase,
+    simbolo,
+    estadoLlegada,
     afd,
-    afnd,
-    cadena
+    afnd
   );
 
   if (!ejecutar) {
     return;
   }
+
+  alfabeto.value = '';
+  estadoInicial.value = '';
+  estadoFinal.value = '';
+  estadoBase.value = '';
+  simbolo.value = '';
+  estadoLlegada.value = '';
+  afd.checked = false;
+  afnd.checked = false;
 });
 
 btnAutomata2.addEventListener('click', async event => {
   event.preventDefault(); //? Evitar que se recarge la pagina
 
-  const alfabeto = document.querySelectorAll('#campo_alfabeto')[1];
+  const alfabeto = document.querySelectorAll('#campo_alfabeto')[1]; //? Selecionar campos individuales en forma de array
   const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[1];
   const estadoFinal = document.querySelectorAll('#campo_estadoFinal')[1];
-  const transiciones = document.querySelectorAll('#campo_transiciones')[1];
+  const estadoBase = document.querySelectorAll('#estado_Inicial')[1];
+  const simbolo = document.querySelectorAll('#simbolo')[1];
+  const estadoLlegada = document.querySelectorAll('#estado_final')[1];
   const afd = document.querySelector('#AFD2');
   const afnd = document.querySelector('#AFND2');
-  const cadena = document.querySelectorAll('#Cadena')[1];
 
-  //? guarda datos del usuario en forma de json para facilidad de transferencia de datos
-  const data = {
-    alfabeto: alfabeto.value,
-    estadoInicial: estadoInicial.value,
-    estadoFinal: estadoFinal.value,
-    transiciones: transiciones.value,
-    afd: afd.checked,
-    afnd: afnd.checked,
-    cadena: cadena.value,
-  };
+  const ejecutar = await formulario(
+    alfabeto,
+    estadoInicial,
+    estadoFinal,
+    estadoBase,
+    simbolo,
+    estadoLlegada,
+    afd,
+    afnd
+  );
 
-  //? peticion fetch para mandar los datos ingresados a traves del fomulario del usuario(programacion asincrona)
-  resp = await fetch('peticiones/infoLog.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
+  if (!ejecutar) {
+    return;
+  }
+
+  alfabeto.value = '';
+  estadoInicial.value = '';
+  estadoFinal.value = '';
+  estadoBase.value = '';
+  simbolo.value = '';
+  estadoLlegada.value = '';
+  afd.checked = false;
+  afnd.checked = false;
 });
 
 const formulario = async (
   alfabeto,
   estadoInicial,
   estadoFinal,
-  transiciones,
+  estadoBase,
+  simbolo,
+  estadoLlegada,
   afd,
-  afnd,
-  cadena
+  afnd
 ) => {
   const validacionBasica = validaciones(
     alfabeto.value,
     estadoInicial.value,
     estadoFinal.value,
-    transiciones.value,
+    estadoBase.value,
+    simbolo.value,
+    estadoLlegada.value,
     afd.checked,
-    afnd.checked,
-    cadena.value
+    afnd.checked
   );
 
   if (!validacionBasica) {
@@ -90,25 +108,16 @@ const formulario = async (
     alfabeto: alfabeto.value,
     estadoInicial: estadoInicial.value,
     estadoFinal: estadoFinal.value,
-    transiciones: transiciones.value,
+    estadoBase: estadoBase.value,
+    simbolo: simbolo.value,
+    estadoLlegada: estadoLlegada.value,
     afd: afd.checked,
     afnd: afnd.checked,
-    cadena: cadena.value,
   };
 
-  //? peticion fetch para mandar los datos ingresados a traves del fomulario del usuario(programacion asincrona)
-  resp = await fetch('./peticiones/infoLog.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
+  peticionInfo(data);
 
-  if (resp.ok) {
-    alert('EL automata se agrego correctamente');
-    return true;
-  }
+  return true;
 };
 
 //* Validaciones de los formularios
@@ -116,10 +125,11 @@ const validaciones = (
   alfabeto,
   estadoInicial,
   estadoFinal,
-  transiciones,
+  estadoBase,
+  simbolo,
+  estadoLlegada,
   afd,
-  afnd,
-  cadena
+  afnd
 ) => {
   const msg = 'El usuario no ha mandado el campo';
 
@@ -138,39 +148,26 @@ const validaciones = (
     alert('El campo Estado Final es requerido');
     return false;
   }
-  if (transiciones === '') {
-    peticionWarning(msg, 'transiciones');
-    alert('El campo Transiciones es requerido');
+  if (estadoBase === '') {
+    peticionWarning(msg, 'Estado Base');
+    alert('El campo Estado Final es requerido');
     return false;
   }
-  if (afd === false && afnd === false) {
+  if (simbolo === '') {
+    peticionWarning(msg, 'Simbolo');
+    alert('El campo Estado Final es requerido');
+    return false;
+  }
+  if (estadoLlegada === '') {
+    peticionWarning(msg, 'Estado Llegada');
+    alert('El campo Estado Final es requerido');
+    return false;
+  }
+  if (afd === afnd) {
     peticionWarning(msg, 'AFD o AFND');
     alert('por favor selecciones una opcion: AFD o AFND');
     return false;
   }
-  if (cadena === '') {
-    peticionWarning(msg, 'Cadenea');
-    alert('El campo Cadena es requerido');
-    return false;
-  }
 
   return true;
-};
-
-//* Peticion para crear un log de tipo warning  cuando el usuario, no ingrese un valor
-const peticionWarning = async (msg, campo) => {
-  const data = {
-    msg,
-    campo,
-  };
-
-  resp = await fetch('./peticiones/warningLog.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
-
-  // console.log(resp);
 };

@@ -67,7 +67,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="mt-3 mb-5">Primer Automata</h2>
-          <form>
+          <form id="automata1">
             <h5 class="form-label">Alfabeto (Σ)</h5>
             <input
               class="form-control my-2"
@@ -91,13 +91,12 @@
             />
 
             <h4>Transiciones</h4>
-            <textarea
-              wrap="hard"
-              id="campo_transiciones"
-              rows="5"
-              class="campo_texto form-control my-2"
-              placeholder="q0, 0, q0"
-            ></textarea>
+            <form id="transiciones-automata1">
+              <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
+              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
+              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="submit" class="btn btn-dark mb-3" value="agregar"/>
+            </form>
 
             <h4>AFD o AFND</h4>
             <input
@@ -116,13 +115,6 @@
               class="form-check-input"
             />
             <label for="AFND">AFND</label><br />
-            <h4>Cadena</h4>
-            <input
-              type="text"
-              id="Cadena"
-              class="form-control my-2"
-              placeholder="01011101101"
-            />
             <input
               id="btn-automata-1"
               class="btn btn-default btn-dark my-3"
@@ -133,7 +125,7 @@
         </div>
         <div class="col-md-6">
           <h2 class="mt-3 mb-5">Segundo Automata</h2>
-          <form>
+          <form id="automata2">
             <h5 class="form-label">Alfabeto (Σ)</h5>
             <input
               class="form-control my-2"
@@ -157,13 +149,12 @@
             />
 
             <h4>Transiciones</h4>
-            <textarea
-              wrap="hard"
-              id="campo_transiciones"
-              rows="5"
-              class="campo_texto form-control my-2"
-              placeholder="q0, 0, q0"
-            ></textarea>
+            <form id="transiciones-automata2">
+              <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
+              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
+              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="submit" class="btn btn-dark mb-3" value="agregar"/>
+            </form>
 
             <h4>AFD o AFND</h4>
             <input
@@ -182,13 +173,6 @@
               class="form-check-input"
             />
             <label for="AFND2">AFND</label><br />
-            <h4>Cadena</h4>
-            <input
-              type="text"
-              id="Cadena"
-              class="form-control my-2"
-              placeholder="01011101101"
-            />
             <input
               id="btn-automata-2"
               class="btn btn-default btn-dark my-3"
@@ -211,5 +195,6 @@
     </div>
     <!--Fin container-->
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/logs.js"></script>
   </body>
 </html>
