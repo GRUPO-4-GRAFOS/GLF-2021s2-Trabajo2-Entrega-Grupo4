@@ -92,9 +92,9 @@
 
             <h4>Transiciones</h4>
             <form id="transiciones-automata1">
-              <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="text" id="estado_Inicial" class="form-control my-3" required placeholder="Estado base" />
+              <input type="text" id="simbolo" class="form-control my-3" required placeholder="Simbolo (elemento perteneciente al alfabeto)" />
+              <input type="text" id="estado_final" class="form-control my-3" required placeholder="Estado Final" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar"/>
             </form>
 
@@ -150,9 +150,9 @@
 
             <h4>Transiciones</h4>
             <form id="transiciones-automata2">
-              <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="text" id="estado_Inicial" class="form-control my-3" required placeholder="Estado base" />
+              <input type="text" id="simbolo" class="form-control my-3" required placeholder="Simbolo (elemento perteneciente al alfabeto)" />
+              <input type="text" id="estado_final" class="form-control my-3" required placeholder="Estado Final" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar"/>
             </form>
 
@@ -196,5 +196,3 @@
     <!--Fin container-->
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/logs.js"></script>
-  </body>
-</html>
