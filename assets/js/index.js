@@ -150,17 +150,17 @@ const validaciones = (
   }
   if (estadoBase === '') {
     peticionWarning(msg, 'Estado Base');
-    alert('El campo Estado Final es requerido');
+    alert('El campo Estado Base es requerido');
     return false;
   }
   if (simbolo === '') {
     peticionWarning(msg, 'Simbolo');
-    alert('El campo Estado Final es requerido');
+    alert('El campo Simbolo es requerido');
     return false;
   }
   if (estadoLlegada === '') {
     peticionWarning(msg, 'Estado Llegada');
-    alert('El campo Estado Final es requerido');
+    alert('El campo Estado Llegada es requerido');
     return false;
   }
   if (afd === afnd) {
