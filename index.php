@@ -118,7 +118,7 @@
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
               <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
               <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
-              <input type="submit" class="btn btn-dark mb-3" value="agregar"/>
+              <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones1"/>
             </form>
         </div>
         <div class="col-md-6">
@@ -174,7 +174,7 @@
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
               <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
               <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
-              <input type="submit" class="btn btn-dark mb-3" value="agregar"/>
+              <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones2"/>
             </form>
         </div>
       </div>
@@ -192,5 +192,7 @@
     <!--Fin container-->
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/logs.js"></script>
+    <script src="./assets/js/validaciones.js"></script>
+    <script src="./assets/js/ejecutar.js"></script>
   </body>
 </html>
