@@ -31,9 +31,13 @@ btnAutomata1.addEventListener('click', async event => {
     return;
   }
 
+  // if (!alfabeto.value.includes(',')) {
+  //   alert('pone una coma para separa el alfabeto');
+  // }
+
   //? guardar los datos del automata1 como json
   automata1 = {
-    alfabeto: alfabeto.value,
+    alfabeto: alfabeto.value.split(','),
     estadoInicial: estadoInicial.value,
     estadoFinal: estadoFinal.value,
     afd: afd.checked,
@@ -70,12 +74,14 @@ btnAutomata2.addEventListener('click', async event => {
   }
 
   automata2 = {
-    alfabeto: alfabeto.value,
+    alfabeto: alfabeto.value.split(','),
     estadoInicial: estadoInicial.value,
     estadoFinal: estadoFinal.value,
     afd: afd.checked,
     afnd: afnd.checked,
   };
+
+  console.log(automata2);
 
   alfabeto.value = '';
   estadoInicial.value = '';
@@ -102,17 +108,15 @@ btnTransicionesA1.addEventListener('click', async event => {
     return false;
   }
 
-  transiciones = {
-    estadoInicial: estadoInicial.value,
-    estadoFinal: estadoFinal.value,
-    simbolo: simbolo.value,
-  };
+  transiciones = [estadoInicial.value, simbolo.value, estadoFinal.value];
 
   transicionesA1.push(transiciones);
 
   estadoInicial.value = '';
   estadoFinal.value = '';
   simbolo.value = '';
+
+  console.log(transicionesA1);
 });
 
 //?Enevnto transiciones Automata 2
@@ -133,14 +137,12 @@ btnTransicionesA2.addEventListener('click', async event => {
     return false;
   }
 
-  transiciones = {
-    estadoInicial: estadoInicial.value,
-    estadoFinal: estadoFinal.value,
-    simbolo: simbolo.value,
-  };
+  transiciones = [estadoInicial.value, simbolo.value, estadoFinal.value];
 
   transicionesA2.push(transiciones);
   estadoInicial.value = '';
   estadoFinal.value = '';
   simbolo.value = '';
+
+  console.log(transicionesA2);
 });

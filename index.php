@@ -190,9 +190,9 @@
       </div>
     </div>
     <!--Fin container-->
-    <script src="./assets/js/index.js"></script>
     <script src="./assets/js/logs.js"></script>
     <script src="./assets/js/validaciones.js"></script>
     <script src="./assets/js/ejecutar.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

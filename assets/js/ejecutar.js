@@ -14,6 +14,8 @@ const ejecutarFormularioAutomata = async (
     afnd.checked
   );
 
+  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+
   if (!validacionBasica) {
     return false;
   }
