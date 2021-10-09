@@ -14,7 +14,7 @@ const peticionWarning = async (msg, campo) => {
   });
 };
 
-const peticionInfo = async data => {
+const peticionInfo = async (data, msg) => {
   //? peticion fetch para mandar los datos ingresados a traves del fomulario del usuario(programacion asincrona)
   resp = await fetch('./peticiones/infoLog.php', {
     method: 'POST',
@@ -25,7 +25,7 @@ const peticionInfo = async data => {
   });
 
   if (resp.ok) {
-    alert('EL automata se agrego correctamente');
+    alert(msg);
     return true;
   }
   return false;
