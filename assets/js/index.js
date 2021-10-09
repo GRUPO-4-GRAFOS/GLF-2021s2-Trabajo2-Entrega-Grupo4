@@ -4,7 +4,6 @@ const btnAutomata2 = document.querySelector('#btn-automata-2');
 const btnTransicionesA1 = document.querySelector('#transiciones1');
 const btnTransicionesA2 = document.querySelector('#transiciones2');
 
-let resp;
 let automata1, automata2;
 let transiciones;
 let transicionesA1 = [];

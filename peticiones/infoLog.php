@@ -5,17 +5,19 @@
   
   $formulario = json_decode(file_get_contents('php://input'), true); //? Recibir datos en php enviados desde js
   $directorio = '../logs';
+  $path = '../logs/info.log';
+  $alfabeto = 'alfabeto';
   
-  if($formulario['alfabeto']){
+  if($formulario[$alfabeto]){
     if($formulario['afd']){
         if(!is_dir($directorio)){ //? Comprobar si existe el directorio de logs, si no existe lo crea
           mkdir($directorio);
         }
         
-        $log = new Log('../logs/info.log');
+        $log = new Log($path);
         $mensaje = array(
             'Datos del automata( ',
-            'El alfabeto: ', $formulario['alfabeto'], 
+            'El alfabeto: ', $formulario[$alfabeto], 
             ' El estado Inicial: ', $formulario['estadoInicial'],
             ' El estado final: ', $formulario['estadoFinal'],
             ' AFD: ', $formulario['afd'],
@@ -27,7 +29,7 @@
         if(!is_dir($directorio)){
             mkdir($directorio);
         }
-        $log = new Log('../logs/info.log');
+        $log = new Log($path);
         $mensaje = array(
             'Datos del automata( ',
             'El alfabeto: ', $formulario['alfabeto'], 
@@ -40,7 +42,7 @@
         $log->close();
     }
   }else{
-      $log = new Log('../logs/info.log');
+      $log = new Log($path);
       $mensaje = array(
           'Transiciones del Automata(',
           'Estado base: ', $formulario['estadoBase'],

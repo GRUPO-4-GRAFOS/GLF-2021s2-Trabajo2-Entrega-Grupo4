@@ -1,3 +1,5 @@
+let resp;
+
 //* Peticion para crear un log de tipo warning  cuando el usuario, no ingrese un valor
 const peticionWarning = async (msg, campo) => {
   const data = {

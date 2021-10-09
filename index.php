@@ -89,18 +89,6 @@
               placeholder="q1"
               id="campo_estadoFinal"
             />
-<<<<<<< HEAD
-
-            <h4>Transiciones</h4>
-            <form id="transiciones-automata1">
-              <input type="text" id="estado_Inicial" class="form-control my-3" required placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" required placeholder="Simbolo (elemento perteneciente al alfabeto)" />
-              <input type="text" id="estado_final" class="form-control my-3" required placeholder="Estado Final" />
-              <input type="submit" class="btn btn-dark mb-3" value="agregar"/>
-            </form>
-
-=======
->>>>>>> rama-chino
             <h4>AFD o AFND</h4>
             <input
               type="radio"
