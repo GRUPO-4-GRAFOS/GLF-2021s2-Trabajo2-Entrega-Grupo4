@@ -1,4 +1,0 @@
-[Info] [07-10-21 16:11:37 ]:Datos del automata( El alfabeto: dsad El estado Inicial: dasdas El estado final: dasdas Transiciones:  AFND: 1 Cadena: )
-[Info] [07-10-21 16:11:41 ]:Datos del automata( El alfabeto: dsad El estado Inicial: dasdas El estado final: dasdas Transiciones:  AFND: 1 Cadena: )
-[Info] [07-10-21 16:13:40 ]:Datos del automata( El alfabeto: dsad El estado Inicial: dsadsa El estado final: dasdas Transiciones:  AFD: 1 Cadena: )
-[Info] [07-10-21 16:15:50 ]:Datos del automata( El alfabeto: sdas El estado Inicial: dasdsad El estado final: asdas Transiciones:  AFND: 1 Cadena: )

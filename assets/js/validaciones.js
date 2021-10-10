@@ -8,17 +8,19 @@ const validacionesAutomata = (
   afd,
   afnd
 ) => {
-  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
   if (alfabeto === '') {
     peticionWarning(msg, 'alfabeto');
     alert('El campo alfabeto es requerido');
     return false;
   }
-  if (!alfabeto.includes(',')) {
+  if (alfabeto.legth > 1){
+   if (!alfabeto.includes(',')) {
     peticionWarning('EL usuario olvido una coma en el campo:', 'alfabeto');
     alert('poner una coma para separa el alfabeto');
     return false;
   }
+  }
+
   if (estadoInicial === '') {
     peticionWarning(msg, 'Estado Inicial');
     alert('El campo Estado Inicial es requerido');
