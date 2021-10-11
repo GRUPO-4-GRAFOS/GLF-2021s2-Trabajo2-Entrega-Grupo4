@@ -25,6 +25,8 @@ ul li {
     margin: 0px;
     color: white;
     padding: 10px;
+    border: black 2px solid;
+    border-right: transparent;
 }
 
 #Automata_2 {
@@ -32,4 +34,11 @@ ul li {
     margin: 0px;
     padding: 10px;
     color: black;
+    border: black 2px solid;
+}
+
+#bt_simular {
+    color: white;
+    font-size: 24px;
+    border-radius: 2px;
 }
