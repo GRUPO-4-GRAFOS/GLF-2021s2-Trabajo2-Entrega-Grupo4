@@ -37,7 +37,7 @@
           </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link link-success active" href="./Integrantes.html">
+              <a class="nav-link link-success active" href="./Integrantes.php">
                 Integrantes
               </a>
             </li>
@@ -86,7 +86,7 @@
             <input
               class="form-control my-2"
               type="text"
-              placeholder="q1"
+              placeholder="q1,q2"
               id="campo_estadoFinal"
             />
             <h4>AFD o AFND</h4>
@@ -116,8 +116,8 @@
           <h4>Transiciones</h4>
             <form id="transiciones-automata1">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo (elemento perteneciente al alfabeto)" />
+              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones1"/>
             </form>
         </div>
@@ -142,7 +142,7 @@
             <input
               class="form-control my-2"
               type="text"
-              placeholder="q1"
+              placeholder="q1,q2"
               id="campo_estadoFinal"
             />
             <h4>AFD o AFND</h4>
@@ -172,8 +172,8 @@
           <h4>Transiciones</h4>
             <form id="transiciones-automata2">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo (elemento perteneciente al alfabeto)" />
+              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones2"/>
             </form>
         </div>
@@ -181,11 +181,11 @@
       <!--fin de la row-->
       <div class="text-center my-3">
         <button
-          id="bt_simular"
+          id="bt_convertir"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
-          Simular
+          Convertir
         </button>
       </div>
     </div>

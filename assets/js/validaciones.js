@@ -13,12 +13,12 @@ const validacionesAutomata = (
     alert('El campo alfabeto es requerido');
     return false;
   }
-  if (alfabeto.legth > 1){
+  if (alfabeto.length > 1){
    if (!alfabeto.includes(',')) {
     peticionWarning('EL usuario olvido una coma en el campo:', 'alfabeto');
     alert('poner una coma para separa el alfabeto');
     return false;
-  }
+    }
   }
 
   if (estadoInicial === '') {
@@ -26,11 +26,23 @@ const validacionesAutomata = (
     alert('El campo Estado Inicial es requerido');
     return false;
   }
+  if (estadoInicial.length > 1){
+     peticionWarning('EL usuario agrego mas de un estado inicial en el campo:', 'Estado Inicial');
+     alert('Solo se permite un estado inicial');
+     return false;
+   }
   if (estadoFinal === '') {
     peticionWarning(msg, 'Estado Final');
     alert('El campo Estado Final es requerido');
     return false;
   }
+  if (estadoFinal.length > 1){
+    if (!estadoFinal.includes(',')) {
+     peticionWarning('EL usuario olvido una coma en el campo:', 'Estado Final');
+     alert('poner una coma para separa el Estado Final');
+     return false;
+     }
+   }
   if (afd === afnd) {
     peticionWarning(msg, 'AFD o AFND');
     alert('por favor selecciones una opcion: AFD o AFND');
