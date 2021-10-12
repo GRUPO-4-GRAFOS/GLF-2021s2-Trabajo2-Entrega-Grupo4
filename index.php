@@ -18,7 +18,7 @@
   
   <body>
     <div class="text-center my-3">
-      <h1 class="fs-1">Grafos Automatas AFD & AFND</h1>
+      <h1 class="fs-1">Grafos Autómatas AFD & AFND</h1>
     </div>
     <!--Inicio container-->
     <div class="container">
@@ -66,7 +66,7 @@
       <!--Inicio de la row-->
       <div class="row">
         <div class="col-md-6" id="Automata_1">
-          <h2 class="mt-3 mb-5">Primer Automata</h2>
+          <h2 class="mt-3 mb-5">Primer Autómata</h2>
           <form id="automata1">
             <h5 class="form-label">Alfabeto (Σ)</h5>
             <input
@@ -110,19 +110,19 @@
               id="btn-automata-1"
               class="btn btn-default btn-dark my-3"
               type="submit"
-              value="Autonoma 1"
+              value="Autómata 1"
             />
           </form>
           <h4>Transiciones</h4>
             <form id="transiciones-automata1">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo (elemento perteneciente al alfabeto)" />
+              <input type="text" id="simbolo" class="form-control my-3" placeholder="Símbolo (elemento perteneciente al alfabeto)" />
               <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones1"/>
             </form>
         </div>
         <div class="col-md-6" id="Automata_2">
-          <h2 class="mt-3 mb-5">Segundo Automata</h2>
+          <h2 class="mt-3 mb-5">Segundo Autómata</h2>
           <form id="automata2">
             <h5 class="form-label">Alfabeto (Σ)</h5>
             <input
@@ -166,13 +166,13 @@
               id="btn-automata-2"
               class="btn btn-default btn-dark my-3"
               type="button"
-              value="Automata 2"
+              value="Autómata 2"
             />
           </form>
           <h4>Transiciones</h4>
             <form id="transiciones-automata2">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo (elemento perteneciente al alfabeto)" />
+              <input type="text" id="simbolo" class="form-control my-3" placeholder="Símbolo (elemento perteneciente al alfabeto)" />
               <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones2"/>
             </form>
@@ -180,13 +180,14 @@
       </div>
       <!--fin de la row-->
       <div class="text-center my-3">
-        <button
+      <a
+        href ="./afnd_a_afd.php"
           id="bt_convertir"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
           Convertir
-        </button>
+        </a>
       </div>
     </div>
     <!--Fin container-->
@@ -196,3 +197,4 @@
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
+     
