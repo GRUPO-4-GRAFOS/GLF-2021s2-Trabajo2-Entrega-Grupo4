@@ -82,11 +82,18 @@
               placeholder="q0"
               id="campo_estadoInicial"
             />
+            <h5>Estados automatas</h5>
+            <input 
+              class="form-control my-2" 
+              type="text" 
+              placeholder="q1, q2, q3 ...." 
+              id="campo_estadosAutomata"
+            />
             <h5 class="form-label">Estado final</h5>
             <input
               class="form-control my-2"
               type="text"
-              placeholder="q1"
+              placeholder="qf"
               id="campo_estadoFinal"
             />
             <h4>AFD o AFND</h4>
@@ -117,7 +124,7 @@
             <form id="transiciones-automata1">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
               <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Llegada" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones1"/>
             </form>
         </div>
@@ -138,11 +145,18 @@
               placeholder="q0"
               id="campo_estadoInicial"
             />
+            <h5>Estados automatas</h5>
+            <input 
+              class="form-control my-2" 
+              type="text" 
+              placeholder="q1, q2, q3 ...." 
+              id="campo_estadosAutomata"
+            />
             <h5 class="form-label">Estado final</h5>
             <input
               class="form-control my-2"
               type="text"
-              placeholder="q1"
+              placeholder="qf"
               id="campo_estadoFinal"
             />
             <h4>AFD o AFND</h4>
@@ -173,7 +187,7 @@
             <form id="transiciones-automata2">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
               <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Final" />
+              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Llegada" />
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones2"/>
             </form>
         </div>
@@ -193,6 +207,7 @@
     <script src="./assets/js/logs.js"></script>
     <script src="./assets/js/validaciones.js"></script>
     <script src="./assets/js/ejecutar.js"></script>
+    <script src="./assets/js/afnd.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
