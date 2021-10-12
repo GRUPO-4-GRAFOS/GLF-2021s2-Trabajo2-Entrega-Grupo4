@@ -14,8 +14,6 @@ const ejecutarFormularioAutomata = async (
     afnd.checked
   );
 
-  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
-
   if (!validacionBasica) {
     return false;
   }
@@ -35,8 +33,18 @@ const ejecutarFormularioAutomata = async (
 };
 
 //? Funcion para guardar las transiciones
-const ejecutarFormularioTransiciones = (estadoBase, simbolo, estadoFinal) => {
-  const validacion = validacionesTransiciones(estadoBase, simbolo, estadoFinal);
+const ejecutarFormularioTransiciones = (
+  estadoBase,
+  simbolo,
+  estadoFinal,
+  alfabeto
+) => {
+  const validacion = validacionesTransiciones(
+    estadoBase,
+    simbolo,
+    estadoFinal,
+    alfabeto
+  );
 
   if (!validacion) {
     return false;
