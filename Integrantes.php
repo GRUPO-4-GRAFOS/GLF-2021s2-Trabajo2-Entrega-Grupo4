@@ -12,11 +12,11 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./img/utemLogo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/img/UTEM.svg.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Trabajo 2 Grafos</title>
   </head>
-
+  
   <body>
     <div class="text-center my-3">
       <h1 class="fs-1">Grafos Automatas AFD & AFND</h1>

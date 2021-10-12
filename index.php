@@ -11,11 +11,11 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./assets/img/utemLogo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/img/UTEM.svg.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Trabajo 2 Grafos</title>
   </head>
-
+  
   <body>
     <div class="text-center my-3">
       <h1 class="fs-1">Grafos Automatas AFD & AFND</h1>
@@ -28,7 +28,7 @@
         <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
           <div class="container-fluid">
             <img
-              src="./assets/img/utemLogo.png"
+              src="./assets/img/UTEM.svg.png"
               alt="logo-utem"
               class="d-inline-block align-text-top"
               width="50"
@@ -49,7 +49,7 @@
       <!--Inicio de la row-->
       <div class="row">
         <h2 class="my-3 text-center">
-          Simula el comportamiento de un AFD y UN AFND
+          Simula el comportamiento de un AFD y un AFND
         </h2>
         <h3 class="my-3 text-center">Intrucciones:</h3>
         <ul class="instrucciones">
@@ -65,7 +65,7 @@
       <!--Fin de la row-->
       <!--Inicio de la row-->
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id="Automata_1">
           <h2 class="mt-3 mb-5">Primer Automata</h2>
           <form id="automata1">
             <h5 class="form-label">Alfabeto (Σ)</h5>
@@ -121,7 +121,7 @@
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones1"/>
             </form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="Automata_2">
           <h2 class="mt-3 mb-5">Segundo Automata</h2>
           <form id="automata2">
             <h5 class="form-label">Alfabeto (Σ)</h5>
