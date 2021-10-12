@@ -13,6 +13,19 @@ let transicionesA2 = [];
 btnAutomata1.addEventListener('click', async event => {
   event.preventDefault(); //? Evitar que se recarge la pagina
 
+  if (!isEmptyObject(automata1)) {
+    alert('Ya ha ingresado el Automata 1');
+
+    alfabeto.value = '';
+    estadoInicial.value = '';
+    estadosAutomatas.value = '';
+    estadoFinal.value = '';
+    afd.checked = false;
+    afnd.checked = false;
+
+    return;
+  }
+
   const alfabeto = document.querySelectorAll('#campo_alfabeto')[0]; //? Selecionar campos individuales en forma de array
   const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[0];
   const estadoFinal = document.querySelectorAll('#campo_estadoFinal')[0];
@@ -59,6 +72,19 @@ btnAutomata1.addEventListener('click', async event => {
 btnAutomata2.addEventListener('click', async event => {
   event.preventDefault(); //? Evitar que se recarge la pagina
 
+  if (!isEmptyObject(automata2)) {
+    alert('Ya ha ingresado el Automata 1');
+
+    alfabeto.value = '';
+    estadoInicial.value = '';
+    estadosAutomatas.value = '';
+    estadoFinal.value = '';
+    afd.checked = false;
+    afnd.checked = false;
+
+    return;
+  }
+
   const alfabeto = document.querySelectorAll('#campo_alfabeto')[1]; //? Selecionar campos individuales en forma de array
   const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[1];
   const estadosAutomatas = document.querySelectorAll(
@@ -95,6 +121,9 @@ btnAutomata2.addEventListener('click', async event => {
   estadoFinal.value = '';
   afd.checked = false;
   afnd.checked = false;
+
+  automata2.estadosAutomatas.unshift(automata2.estadoInicial);
+  automata2.estadosAutomatas.push(automata2.estadoFinal);
 });
 
 //?Enevnto transiciones Automata 1
@@ -111,27 +140,27 @@ btnTransicionesA1.addEventListener('click', async event => {
 
   const estadoInicial = document.querySelectorAll('#estado_Inicial')[0];
   const simbolo = document.querySelectorAll('#simbolo')[0];
-  const estadoFinal = document.querySelectorAll('#estado_final')[0];
+  const estadoLlegada = document.querySelectorAll('#estado_final')[0];
 
   const ejecutar = await ejecutarFormularioTransiciones(
     estadoInicial.value,
     simbolo.value,
-    estadoFinal.value,
-    automata1.alfabeto
+    estadoLlegada.value,
+    automata1.alfabeto,
+    automata1.estadosAutomatas
   );
+
   if (!ejecutar) {
     return false;
   }
 
-  transiciones = [estadoInicial.value, simbolo.value, estadoFinal.value];
+  transiciones = [estadoInicial.value, simbolo.value, estadoLlegada.value];
 
   transicionesA1.push(transiciones);
 
   estadoInicial.value = '';
-  estadoFinal.value = '';
+  estadoLlegada.value = '';
   simbolo.value = '';
-
-  // si(automata1.alfabeto, automata1.estadosAutomatas);
 });
 
 //?Enevnto transiciones Automata 2
@@ -149,24 +178,25 @@ btnTransicionesA2.addEventListener('click', async event => {
 
   const estadoInicial = document.querySelectorAll('#estado_Inicial')[1];
   const simbolo = document.querySelectorAll('#simbolo')[1];
-  const estadoFinal = document.querySelectorAll('#estado_final')[1];
+  const estadoLlegada = document.querySelectorAll('#estado_final')[1];
 
   const ejecutar = await ejecutarFormularioTransiciones(
     estadoInicial.value,
     simbolo.value,
-    estadoFinal.value,
-    automata2.alfabeto
+    estadoLlegada.value,
+    automata2.alfabeto,
+    automata2.estadosAutomatas
   );
 
   if (!ejecutar) {
     return false;
   }
 
-  transiciones = [estadoInicial.value, simbolo.value, estadoFinal.value];
+  transiciones = [estadoInicial.value, simbolo.value, estadoLlegada.value];
 
   transicionesA2.push(transiciones);
 
   estadoInicial.value = '';
-  estadoFinal.value = '';
+  estadoLlegada.value = '';
   simbolo.value = '';
 });

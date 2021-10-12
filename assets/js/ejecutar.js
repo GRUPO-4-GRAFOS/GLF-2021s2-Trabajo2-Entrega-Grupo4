@@ -37,13 +37,15 @@ const ejecutarFormularioTransiciones = (
   estadoBase,
   simbolo,
   estadoFinal,
-  alfabeto
+  alfabeto,
+  estados
 ) => {
   const validacion = validacionesTransiciones(
     estadoBase,
     simbolo,
     estadoFinal,
-    alfabeto
+    alfabeto,
+    estados
   );
 
   if (!validacion) {
