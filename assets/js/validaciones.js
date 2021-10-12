@@ -43,8 +43,10 @@ const validacionesTransiciones = (
   estadoBase,
   simbolo,
   estadoFinal,
-  alfabeto
+  alfabeto,
+  estados
 ) => {
+  console.log(estados);
   /* Validar que los cmapos no esten vacios */
   if (estadoBase === '') {
     peticionWarning(msg, 'Estado base');
@@ -63,10 +65,44 @@ const validacionesTransiciones = (
     return false;
   }
 
-  for (var si = 0; si <= alfabeto.length; si++) {
-    if (alfabeto[si] === simbolo) {
+  //* Validar que el simbolo ingresado exista en el alfabeto
+  for (let cont = 0; cont <= alfabeto.length; cont++) {
+    if (alfabeto[cont] === simbolo) {
+      break;
+    } else if (cont === alfabeto.length) {
       alert(`El simbolo ${simbolo} no pertenece al alfabeto`);
+      peticionWarning(
+        'El usuario ah agregado un sibolo que no existe en el alfabeto:',
+        'alfabeto'
+      );
 
+      return false;
+    }
+  }
+
+  //* Validar que los estados base y final existan en el automata
+  for (let e1 = 0; e1 <= estados.length; e1++) {
+    if (estadoBase === estados[e1]) {
+      break;
+    } else if (e1 === estados.length) {
+      alert('El estado de base del usuario no pertenece al automata');
+      peticionWarning(
+        'El usuario ah agregado un estado que no exista en el automota',
+        estadoBase
+      );
+      return false;
+    }
+  }
+
+  for (let e2 = 0; e2 <= estados.length; e2++) {
+    if (estadoFinal === estados[e2]) {
+      break;
+    } else if (e2 === estados.length) {
+      alert('El estado de llegada del usuario no pertenece al automata');
+      peticionWarning(
+        'El usuario ah agregado un estado que no exista en el automota',
+        estadoBase
+      );
       return false;
     }
   }
