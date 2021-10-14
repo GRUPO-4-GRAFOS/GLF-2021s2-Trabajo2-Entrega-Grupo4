@@ -35,31 +35,21 @@
               height="50"
             />
           </div>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link link-success active" href="./Integrantes.php">
-                Integrantes
-              </a>
-            </li>
-          </ul>
         </nav>
         <!--Fin del menu-->
       </div>
       <!--Fin de la row-->
       <!--Inicio de la row-->
       <div class="row">
-        <h2 class="my-3 text-center">
-          Simula el comportamiento de un AFD y un AFND
-        </h2>
         <h3 class="my-3 text-center">Intrucciones:</h3>
         <ul class="instrucciones">
-          <li>1° paso:</li>
-          <li>2° paso:</li>
-          <li>3° paso:</li>
-          <li>
-            4° paso: el formato que debe tener las transiciones es: estado
-            Inicial, simbolo, nuevo Estado.
-          </li>
+          <li>Para agregar datos a los automatas, debe considerar los siguiente: </li>
+          <li>Primero: El alfabeto debe ser separado por coma</li>
+          <li>Segundo: En el estado inicial, el usuario puede agregar infitos caracteres, pero solo se considerara como un unico estado inicial </li>
+          <li>Tercero: El el estado automatas,se debe separar por comas </li>
+          <li>Cuarto: El el estado final,se debe separar por comas</li>
+          <li>Quinto: El el estado final,se debe separar por comas</li>
+          <li>Luego de haber agregado el automata debe agregar las transiciones con los estados y alfabeto agregado anteriormente</li>
         </ul>
       </div>
       <!--Fin de la row-->
@@ -93,11 +83,7 @@
             <input
               class="form-control my-2"
               type="text"
-<<<<<<< HEAD
-              placeholder="q1,q2"
-=======
               placeholder="qf"
->>>>>>> rama-chino
               id="campo_estadoFinal"
             />
             <h4>AFD o AFND</h4>
@@ -127,13 +113,8 @@
           <h4>Transiciones</h4>
             <form id="transiciones-automata1">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-<<<<<<< HEAD
               <input type="text" id="simbolo" class="form-control my-3" placeholder="Símbolo (elemento perteneciente al alfabeto)" />
               <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
-=======
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Llegada" />
->>>>>>> rama-chino
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones1"/>
             </form>
         </div>
@@ -165,11 +146,7 @@
             <input
               class="form-control my-2"
               type="text"
-<<<<<<< HEAD
-              placeholder="q1,q2"
-=======
               placeholder="qf"
->>>>>>> rama-chino
               id="campo_estadoFinal"
             />
             <h4>AFD o AFND</h4>
@@ -199,13 +176,8 @@
           <h4>Transiciones</h4>
             <form id="transiciones-automata2">
               <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-<<<<<<< HEAD
               <input type="text" id="simbolo" class="form-control my-3" placeholder="Símbolo (elemento perteneciente al alfabeto)" />
               <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
-=======
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Simbolo/condicio" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado Llegada" />
->>>>>>> rama-chino
               <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones2"/>
             </form>
         </div>
@@ -228,6 +200,31 @@
     <script src="./assets/js/ejecutar.js"></script>
     <script src="./assets/js/afnd.js"></script>
     <script src="./assets/js/index.js"></script>
+  
+
+    <div class="section_footer">
+    	<div class="container">
+    	    <div class="footer_section_2">
+		        <div class="row">
+    		        <div class="col-sm-6 col-md-6 col-lg-3">
+    		        	<h2 class="shop_text">Quiénes somos</h2>
+    		        	<p class="dummy_text"> Somos un equipo diverso con perspectivas únicas. Unido en nuestro propósito. Impulsados por nuestra ambición y el poder de explicar
+             de una manera mas dinamica la transformación de un grafo afnd a un grafo afd, ademas de obtener el autómata a partir del complemento,
+             unión, concatenación e intersección entre ambos autómatas.</p>
+    		        </div>
+    		        <div class="col-sm-6 col-mb-6 col-lg-3">
+    		        	<h2 class="shop_text">Integrantes</h2>
+    				    <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Lucas Castillos</span></div>
+    				    <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Nicolas Garay</span></div>
+    				    <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Rocio Leiva</span></div>
+                <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Paula Ruiz</span></div>
+                <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Victor Venegas</span></div>
+    		        </div>
+    			</div>
+    	  </div>
+	    </div>
+    </div>
+    </div>
   </body>
 </html>
      

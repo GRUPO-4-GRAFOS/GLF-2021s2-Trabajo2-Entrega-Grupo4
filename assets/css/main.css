@@ -42,3 +42,65 @@ ul li {
     font-size: 24px;
     border-radius: 2px;
 }
+
+.section_footer{
+	width: 100%;
+	float: left;
+	background-color: #272222;
+	height: auto;
+	padding-top: 30px;
+	padding-bottom: 30px; 
+
+}
+
+.footer_section_2{
+	width: 100%;
+	float: left;
+	padding-top: 40px;
+}
+
+.shop_text {
+    width: 100%;
+    float: left;
+    font-size: 28px;
+    color: #ebebeb;
+    font-weight: bold;
+    padding: 25px 0px;
+}
+
+.dummy_text {
+    width: 100%;
+    float: left;
+    font-size: 12pt;
+    color: #ebebeb;
+    margin-left: 0px;
+    margin-top: 0px;
+    line-height: 30px;
+}
+
+.pet_text {
+    font-size: 12pt;
+    color: #ebebeb;
+    padding-left: 16px;
+}
+
+.image-icon {
+    width: 100%;
+    float: left;
+    padding-top: 6px;
+}
+
+.footer-img {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+}
+
+.adderess_text{
+    width: 100%;
+    float: left;
+    font-size: 28px;
+    color: #ebebeb;
+    font-weight: bold;
+    padding: 25px 0px;
+}

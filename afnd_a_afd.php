@@ -18,7 +18,7 @@
   
   <body>
     <div class="text-center my-3">
-      <h1 class="fs-1">Grafos Automatas AFD & AFND</h1>
+      <h1 class="fs-1">Grafos Autómatas AFD & AFND</h1>
     </div>
     <!--Inicio container-->
     <div class="container">
@@ -37,7 +37,37 @@
           </div>
         </nav>
       </div>
-    </div>
+
+if (si se agregaron datos ){
+if (si algun automata es afnd){
+
+
+  funcion para pasar de afnd a afd
+}
+
+
+else (si ambos automatas son afd){
+  mensaje = " ambos utomatas ingresados son afd"
+}
+}
+else {
+  mensaje = vuelva y agregue los datos requeridos 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="text-center my-3">
         <a
           href ="./complemento.php"

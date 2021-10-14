@@ -37,16 +37,24 @@
           </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
+              <a class="nav-link link-success active" href="./index.php">
+                PagPrincipal
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link link-success active" href="./afnd_a_afd.php">
                 Volver
               </a>
             </li>
+            
           </ul>
         </nav>
       </div>
 
-
 NOTA: El complemento es una propiedad SOLO para AFD!!!
-Inter cambiar estados finales por no finales
+crea un estado incial y lo une con ambos estados iniciales de los automatas, asiendo que estos estados iniciales pasen a ser intermedios
+
+
+if para saber si es afnd
 </body>
 </html>
