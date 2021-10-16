@@ -11,11 +11,15 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./assets/img/UTEM.svg.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/UTEM.svg.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Trabajo 2 Grafos</title>
   </head>
-  
+
   <body>
     <div class="text-center my-3">
       <h1 class="fs-1">Grafos Autómatas AFD & AFND</h1>
@@ -43,13 +47,21 @@
       <div class="row">
         <h3 class="my-3 text-center">Intrucciones:</h3>
         <ul class="instrucciones">
-          <li>Para agregar datos a los automatas, debe considerar los siguiente: </li>
+          <li>
+            Para agregar datos a los automatas, debe considerar los siguiente:
+          </li>
           <li>Primero: El alfabeto debe ser separado por coma</li>
-          <li>Segundo: En el estado inicial, el usuario puede agregar infitos caracteres, pero solo se considerara como un unico estado inicial </li>
-          <li>Tercero: El el estado automatas,se debe separar por comas </li>
+          <li>
+            Segundo: En el estado inicial, el usuario puede agregar infitos
+            caracteres, pero solo se considerara como un unico estado inicial
+          </li>
+          <li>Tercero: El el estado automatas,se debe separar por comas</li>
           <li>Cuarto: El el estado final,se debe separar por comas</li>
           <li>Quinto: El el estado final,se debe separar por comas</li>
-          <li>Luego de haber agregado el automata debe agregar las transiciones con los estados y alfabeto agregado anteriormente</li>
+          <li>
+            Luego de haber agregado el automata debe agregar las transiciones
+            con los estados y alfabeto agregado anteriormente
+          </li>
         </ul>
       </div>
       <!--Fin de la row-->
@@ -73,10 +85,10 @@
               id="campo_estadoInicial"
             />
             <h5>Estados automatas</h5>
-            <input 
-              class="form-control my-2" 
-              type="text" 
-              placeholder="q1, q2, q3 ...." 
+            <input
+              class="form-control my-2"
+              type="text"
+              placeholder="q1, q2, q3 ...."
               id="campo_estadosAutomata"
             />
             <h5 class="form-label">Estado final</h5>
@@ -111,12 +123,32 @@
             />
           </form>
           <h4>Transiciones</h4>
-            <form id="transiciones-automata1">
-              <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Símbolo (elemento perteneciente al alfabeto)" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
-              <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones1"/>
-            </form>
+          <form id="transiciones-automata1">
+            <input
+              type="text"
+              id="estado_Inicial"
+              class="form-control my-3"
+              placeholder="Estado base"
+            />
+            <input
+              type="text"
+              id="simbolo"
+              class="form-control my-3"
+              placeholder="Símbolo (elemento perteneciente al alfabeto)"
+            />
+            <input
+              type="text"
+              id="estado_final"
+              class="form-control my-3"
+              placeholder="Estado de Llegada"
+            />
+            <input
+              type="submit"
+              class="btn btn-dark mb-3"
+              value="agregar"
+              id="transiciones1"
+            />
+          </form>
         </div>
         <div class="col-md-6" id="Automata_2">
           <h2 class="mt-3 mb-5">Segundo Autómata</h2>
@@ -136,10 +168,10 @@
               id="campo_estadoInicial"
             />
             <h5>Estados automatas</h5>
-            <input 
-              class="form-control my-2" 
-              type="text" 
-              placeholder="q1, q2, q3 ...." 
+            <input
+              class="form-control my-2"
+              type="text"
+              placeholder="q1, q2, q3 ...."
               id="campo_estadosAutomata"
             />
             <h5 class="form-label">Estado final</h5>
@@ -174,18 +206,38 @@
             />
           </form>
           <h4>Transiciones</h4>
-            <form id="transiciones-automata2">
-              <input type="text" id="estado_Inicial" class="form-control my-3" placeholder="Estado base" />
-              <input type="text" id="simbolo" class="form-control my-3" placeholder="Símbolo (elemento perteneciente al alfabeto)" />
-              <input type="text" id="estado_final" class="form-control my-3" placeholder="Estado de Llegada" />
-              <input type="submit" class="btn btn-dark mb-3" value="agregar" id="transiciones2"/>
-            </form>
+          <form id="transiciones-automata2">
+            <input
+              type="text"
+              id="estado_Inicial"
+              class="form-control my-3"
+              placeholder="Estado base"
+            />
+            <input
+              type="text"
+              id="simbolo"
+              class="form-control my-3"
+              placeholder="Símbolo (elemento perteneciente al alfabeto)"
+            />
+            <input
+              type="text"
+              id="estado_final"
+              class="form-control my-3"
+              placeholder="Estado de Llegada"
+            />
+            <input
+              type="submit"
+              class="btn btn-dark mb-3"
+              value="agregar"
+              id="transiciones2"
+            />
+          </form>
         </div>
       </div>
       <!--fin de la row-->
       <div class="text-center my-3">
-      <a
-        href ="./afnd_a_afd.php"
+        <a
+          href="./afnd_a_afd.php"
           id="bt_convertir"
           class="btn btn-default btn-dark btn-large"
           type="button"
@@ -195,36 +247,59 @@
       </div>
     </div>
     <!--Fin container-->
+   
+
+    <div class="section_footer">
+      <div class="container">
+        <div class="footer_section_2">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <h2 class="shop_text">Quiénes somos</h2>
+              <p class="dummy_text">
+                Somos un equipo diverso con perspectivas únicas. Unido en
+                nuestro propósito. Impulsados por nuestra ambición y el poder de
+                explicar de una manera mas dinamica la transformación de un
+                grafo afnd a un grafo afd, ademas de obtener el autómata a
+                partir del complemento, unión, concatenación e intersección
+                entre ambos autómatas.
+              </p>
+            </div>
+            <div class="col-sm-6 col-mb-6 col-lg-3">
+              <h2 class="shop_text">Integrantes</h2>
+              <div class="image-icon">
+                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                  >Lucas Castillos</span
+                >
+              </div>
+              <div class="image-icon">
+                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                  >Nicolas Garay</span
+                >
+              </div>
+              <div class="image-icon">
+                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                  >Rocio Leiva</span
+                >
+              </div>
+              <div class="image-icon">
+                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                  >Paula Ruiz</span
+                >
+              </div>
+              <div class="image-icon">
+                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                  >Victor Venegas</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./assets/js/logs.js"></script>
     <script src="./assets/js/validaciones.js"></script>
     <script src="./assets/js/ejecutar.js"></script>
     <script src="./assets/js/afnd.js"></script>
     <script src="./assets/js/index.js"></script>
-  
-
-    <div class="section_footer">
-    	<div class="container">
-    	    <div class="footer_section_2">
-		        <div class="row">
-    		        <div class="col-sm-6 col-md-6 col-lg-3">
-    		        	<h2 class="shop_text">Quiénes somos</h2>
-    		        	<p class="dummy_text"> Somos un equipo diverso con perspectivas únicas. Unido en nuestro propósito. Impulsados por nuestra ambición y el poder de explicar
-             de una manera mas dinamica la transformación de un grafo afnd a un grafo afd, ademas de obtener el autómata a partir del complemento,
-             unión, concatenación e intersección entre ambos autómatas.</p>
-    		        </div>
-    		        <div class="col-sm-6 col-mb-6 col-lg-3">
-    		        	<h2 class="shop_text">Integrantes</h2>
-    				    <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Lucas Castillos</span></div>
-    				    <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Nicolas Garay</span></div>
-    				    <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Rocio Leiva</span></div>
-                <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Paula Ruiz</span></div>
-                <div class="image-icon"><img src="./assets/img/bulit-icon.png"><span class="pet_text">Victor Venegas</span></div>
-    		        </div>
-    			</div>
-    	  </div>
-	    </div>
-    </div>
-    </div>
   </body>
 </html>
-     
