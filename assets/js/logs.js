@@ -32,3 +32,16 @@ const peticionInfo = async (data, msg) => {
   }
   return false;
 };
+
+const peticionError = async error => {
+  const data = {
+    error,
+  };
+  resp = await fetch('./peticiones/errorLog.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+};
