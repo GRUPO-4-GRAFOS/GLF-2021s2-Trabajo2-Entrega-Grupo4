@@ -164,21 +164,21 @@
             <input
               class="form-control my-2"
               type="text"
-              placeholder="q0"
+              placeholder="r0"
               id="campo_estadoInicial"
             />
             <h5>Estados automatas</h5>
             <input
               class="form-control my-2"
               type="text"
-              placeholder="q1, q2, q3 ...."
+              placeholder="r1, r2, r3 ...."
               id="campo_estadosAutomata"
             />
             <h5 class="form-label">Estado final</h5>
             <input
               class="form-control my-2"
               type="text"
-              placeholder="qf"
+              placeholder="rf"
               id="campo_estadoFinal"
             />
             <h4>AFD o AFND</h4>
@@ -252,8 +252,8 @@
     <div class="section_footer">
       <div class="container">
         <div class="footer_section_2">
-          <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="footer__flex">
+            <div>
               <h2 class="shop_text">Quiénes somos</h2>
               <p class="dummy_text">
                 Somos un equipo diverso con perspectivas únicas. Unido en
@@ -264,30 +264,30 @@
                 entre ambos autómatas.
               </p>
             </div>
-            <div class="col-sm-6 col-mb-6 col-lg-3">
+            <div>
               <h2 class="shop_text">Integrantes</h2>
               <div class="image-icon">
-                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                <img alt="logo" src="./assets/img/bulit-icon.png" /><span class="pet_text"
                   >Lucas Castillos</span
                 >
               </div>
               <div class="image-icon">
-                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                <img alt="logo" src="./assets/img/bulit-icon.png" /><span class="pet_text"
                   >Nicolas Garay</span
                 >
               </div>
               <div class="image-icon">
-                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                <img alt="logo" src="./assets/img/bulit-icon.png" /><span class="pet_text"
                   >Rocio Leiva</span
                 >
               </div>
               <div class="image-icon">
-                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                <img alt="logo" src="./assets/img/bulit-icon.png" /><span class="pet_text"
                   >Paula Ruiz</span
                 >
               </div>
               <div class="image-icon">
-                <img src="./assets/img/bulit-icon.png" /><span class="pet_text"
+                <img alt="logo" src="./assets/img/bulit-icon.png" /><span class="pet_text"
                   >Victor Venegas</span
                 >
               </div>
