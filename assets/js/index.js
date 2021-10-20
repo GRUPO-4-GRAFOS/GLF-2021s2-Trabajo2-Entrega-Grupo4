@@ -14,6 +14,15 @@ try {
   btnAutomata1.addEventListener('click', async event => {
     event.preventDefault(); //? Evitar que se recarge la pagina
 
+    const alfabeto = document.querySelectorAll('#campo_alfabeto')[0]; //? Selecionar campos individuales en forma de array
+    const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[0];
+    const estadoFinal = document.querySelectorAll('#campo_estadoFinal')[0];
+    const estadosAutomatas = document.querySelectorAll(
+      '#campo_estadosAutomata'
+    )[0];
+    const afd = document.querySelector('#AFD');
+    const afnd = document.querySelector('#AFND');
+
     if (!isEmptyObject(automata1)) {
       alert('Ya ha ingresado el Automata 1');
 
@@ -26,15 +35,6 @@ try {
 
       return;
     }
-
-    const alfabeto = document.querySelectorAll('#campo_alfabeto')[0]; //? Selecionar campos individuales en forma de array
-    const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[0];
-    const estadoFinal = document.querySelectorAll('#campo_estadoFinal')[0];
-    const estadosAutomatas = document.querySelectorAll(
-      '#campo_estadosAutomata'
-    )[0];
-    const afd = document.querySelector('#AFD');
-    const afnd = document.querySelector('#AFND');
 
     const ejecutar = await ejecutarFormularioAutomata(
       alfabeto,
@@ -75,6 +75,15 @@ try {
   btnAutomata2.addEventListener('click', async event => {
     event.preventDefault(); //? Evitar que se recarge la pagina
 
+    const alfabeto = document.querySelectorAll('#campo_alfabeto')[1]; //? Selecionar campos individuales en forma de array
+    const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[1];
+    const estadosAutomatas = document.querySelectorAll(
+      '#campo_estadosAutomata'
+    )[1];
+    const estadoFinal = document.querySelectorAll('#campo_estadoFinal')[1];
+    const afd = document.querySelector('#AFD2');
+    const afnd = document.querySelector('#AFND2');
+
     if (!isEmptyObject(automata2)) {
       alert('Ya ha ingresado el Automata 1');
 
@@ -87,15 +96,6 @@ try {
 
       return;
     }
-
-    const alfabeto = document.querySelectorAll('#campo_alfabeto')[1]; //? Selecionar campos individuales en forma de array
-    const estadoInicial = document.querySelectorAll('#campo_estadoInicial')[1];
-    const estadosAutomatas = document.querySelectorAll(
-      '#campo_estadosAutomata'
-    )[1];
-    const estadoFinal = document.querySelectorAll('#campo_estadoFinal')[1];
-    const afd = document.querySelector('#AFD2');
-    const afnd = document.querySelector('#AFND2');
 
     const ejecutar = await ejecutarFormularioAutomata(
       alfabeto,
@@ -159,7 +159,11 @@ try {
       return false;
     }
 
-    transiciones = [estadoInicial.value, simbolo.value, estadoLlegada.value];
+    transiciones = {
+      estadoInicio: estadoInicial.value,
+      simbolo: simbolo.value,
+      estadoLlegada: estadoLlegada.value,
+    };
 
     transicionesA1.push(transiciones);
 
@@ -167,7 +171,7 @@ try {
     estadoLlegada.value = '';
     simbolo.value = '';
 
-    localStorage.setItem('transicionesA1', transicionesA1.toString());
+    localStorage.setItem('transicionesA1', JSON.stringify(transicionesA1));
   });
 
   //?Enevnto transiciones Automata 2
@@ -199,7 +203,11 @@ try {
       return false;
     }
 
-    transiciones = [estadoInicial.value, simbolo.value, estadoLlegada.value];
+    transiciones = {
+      estadoInicio: estadoInicial.value,
+      simbolo: simbolo.value,
+      estadoLlegada: estadoLlegada.value,
+    };
 
     transicionesA2.push(transiciones);
 
@@ -207,7 +215,7 @@ try {
     estadoLlegada.value = '';
     simbolo.value = '';
 
-    localStorage.setItem('transicionesA2', transicionesA2.toString());
+    localStorage.setItem('transicionesA2', JSON.stringify(transicionesA2));
   });
 } catch (e) {
   peticionError(`El programa fallo de forma extra manera ${e}`);
