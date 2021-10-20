@@ -17,6 +17,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/vis.css" />
     <title>Trabajo 2 Grafos</title>
   </head>
 
@@ -60,41 +61,54 @@
       </pre>
       <div class="text-center my-3">
         <button
-          href="./complemento.php"
-          id="bt_convertir"
+          id="btnComplemento"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
           Complemento
         </button>
         <button
-          href="./union.php"
-          id="bt_convertir"
+          id="btnUnion"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
           Unión
         </button>
         <button
-          href="./concatenacion.php"
-          id="bt_convertir"
+          id="btnConcatenacion"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
           concatenación
         </button>
         <button
-          href="./interseccion.php"
-          id="bt_convertir"
+          id="btnInterseccion"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
           intersección
         </button>
       </div>
+      <div class="row">
+        <div class="col-6 mt-5">
+          <h1 class="text-center">Automata 1</h1>
+          <div class="data" id="automata1"></div>
+        </div>
+        <div class="col-6 mt-5">
+        <h1 class="text-center">Automata 2</h1>
+          <div class="data" id="automata2"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-8">
+          <h1 class="text-center">Automata resultante</h1>
+          <div id="automataResultante" class="automataResultante"></div>
+        </div>
+      </div>
     </div>
-    <script src="./assets/js/funciones.js"></script>
+    <script src="./assets/js/vis.js"></script>
     <script src="./assets/js/logs.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/automatas.js" type="module"></script>
   </body>
 </html>
