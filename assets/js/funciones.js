@@ -97,7 +97,7 @@ export const crearAutomatas = () => {
     edges: aristasAutomata1,
   };
 
-  const networkA1 = new vis.Network(network1, data1, options);
+  new vis.Network(network1, data1, options);
 
   //establecer datos del segundo automata
   const nodosAutomata2 = new vis.DataSet(nodosA2);
@@ -109,7 +109,7 @@ export const crearAutomatas = () => {
     edges: aristasAutomata2,
   };
 
-  const networkA2 = new vis.Network(network2, data2, options);
+  new vis.Network(network2, data2, options);
 };
 
 export const union = () => {
@@ -145,5 +145,5 @@ export const union = () => {
   };
   const div = document.querySelector('#automataResultante');
 
-  const network = new vis.Network(div, data, options);
+  new vis.Network(div, data, options);
 };

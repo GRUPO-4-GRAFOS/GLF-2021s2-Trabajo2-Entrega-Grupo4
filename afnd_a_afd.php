@@ -106,7 +106,10 @@
         </div>
       </div>
     </div>
-    <script src="./assets/js/vis.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
     <script src="./assets/js/logs.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/automatas.js" type="module"></script>
