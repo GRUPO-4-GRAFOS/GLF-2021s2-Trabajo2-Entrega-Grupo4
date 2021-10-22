@@ -46,7 +46,6 @@ const validacionesTransiciones = (
   alfabeto,
   estados
 ) => {
-  console.log(estados);
   /* Validar que los cmapos no esten vacios */
   if (estadoBase === '') {
     peticionWarning(msg, 'Estado base');

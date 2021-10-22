@@ -11,14 +11,19 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./assets/img/UTEM.svg.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/UTEM.svg.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/vis.css" />
     <title>Trabajo 2 Grafos</title>
   </head>
-  
+
   <body>
     <div class="text-center my-3">
-      <h1 class="fs-1">Grafos Automatas AFD & AFND</h1>
+      <h1 class="fs-1">Grafos Autómatas AFD & AFND</h1>
     </div>
     <!--Inicio container-->
     <div class="container">
@@ -37,39 +42,76 @@
           </div>
         </nav>
       </div>
-    </div>
-    <div class="text-center my-3">
-        <a
-          href ="./complemento.php"
-          id="bt_convertir"
+      <pre>
+        if (si se agregaron datos ){
+        if (si algun automata es afnd){
+
+
+          funcion para pasar de afnd a afd
+        }
+
+
+        else (si ambos automatas son afd){
+          mensaje = " ambos utomatas ingresados son afd"
+        }
+        }
+        else {
+          mensaje = vuelva y agregue los datos requeridos 
+        }
+      </pre>
+      <div class="text-center my-3">
+        <button
+          id="btnComplemento"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
-        Complemento
-        </a>
-        <a
-          href ="./union.php"
-          id="bt_convertir"
+          Complemento
+        </button>
+        <button
+          id="btnUnion"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
           Unión
-        </a>
-        <a
-          href ="./concatenacion.php"
-          id="bt_convertir"
+        </button>
+        <button
+          id="btnConcatenacion"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
-        concatenación
-        </a>
-        <a
-          href ="./interseccion.php"
-          id="bt_convertir"
+          concatenación
+        </button>
+        <button
+          id="btnInterseccion"
           class="btn btn-default btn-dark btn-large"
           type="button"
         >
-        intersección
-        </a>
-</div>
-</body>
+          intersección
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-6 mt-5">
+          <h1 class="text-center">Automata 1</h1>
+          <div class="data" id="automata1"></div>
+        </div>
+        <div class="col-6 mt-5">
+        <h1 class="text-center">Automata 2</h1>
+          <div class="data" id="automata2"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-8">
+          <h1 class="text-center">Automata resultante</h1>
+          <div id="automataResultante" class="automataResultante"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <script src="./assets/js/logs.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/automatas.js" type="module"></script>
+  </body>
+</html>
