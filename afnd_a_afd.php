@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="./assets/css/vis.css" />
     <title>Trabajo 2 Grafos</title>
   </head>
-
   <body>
     <div class="text-center my-3">
       <h1 class="fs-1">Grafos Autómatas AFD & AFND</h1>
@@ -42,23 +41,6 @@
           </div>
         </nav>
       </div>
-      <pre>
-        if (si se agregaron datos ){
-        if (si algun automata es afnd){
-
-
-          funcion para pasar de afnd a afd
-        }
-
-
-        else (si ambos automatas son afd){
-          mensaje = " ambos utomatas ingresados son afd"
-        }
-        }
-        else {
-          mensaje = vuelva y agregue los datos requeridos 
-        }
-      </pre>
       <div class="text-center my-3">
         <button
           id="btnComplemento"

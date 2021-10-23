@@ -147,3 +147,43 @@ export const union = () => {
 
   new vis.Network(div, data, options);
 };
+
+export const interseccion = () => {
+  const nodos = [];
+  const aristas1 = [...conexionA1];
+  const aristas2 = [...conexionA2];
+  const edges = [];
+
+  nodos.forEach((e, i) => {
+  nodos[i].id = i;
+  });
+
+  for(let i = 0; i < nodosA1.length; i++){
+    for(let j = 0; j < nodosA2.length; j++){
+      nodos.push(nodosA1[i]+nodosA2[j]);
+    }
+  }
+
+  let con = 0;
+  let arista = {};
+  for(let i = 0; i < nodosA1.length; i++){
+    for(let j = 0; j < nodosA2.length; j++){
+      if(aristas1.size === aristas2.size){
+        arista.id = con;
+        arista.label = aristas1.label+aristas2.label;
+        arista.from = 0;
+        arista.to = aristas1.to;
+        con++;
+      }
+    }
+  }
+  edges.push(arista);
+
+  const data2 = {
+    nodes: nodos,
+    edges,
+  };
+  const div2 = document.querySelector('#automataResultante');
+
+  new vis.Network(div2, data2, options);
+};
