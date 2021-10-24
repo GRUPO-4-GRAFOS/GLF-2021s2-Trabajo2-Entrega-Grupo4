@@ -1,2 +1,10 @@
 [Info] [22-10-21 18:41:50 ]:Datos del automata( El alfabeto: 0,1 El estado Inicial: q0 El estado final: q2 AFND: 1)
 [Info] [22-10-21 18:45:45 ]:Datos del automata( El alfabeto: 0,1 El estado Inicial: q0 El estado final: q3 AFND: 1)
+[Info] [24-10-21 18:53:13 ]:Datos del automata( El alfabeto: 0,1 El estado Inicial: q0 El estado final: qf AFD: 1)
+[Info] [24-10-21 18:53:17 ]:Transiciones del Automata(Estado base: q0 Simbolo: 0 Estado final: q1
+[Info] [24-10-21 18:53:26 ]:Transiciones del Automata(Estado base: q1 Simbolo: 1 Estado final: qf
+[Info] [24-10-21 18:53:32 ]:Transiciones del Automata(Estado base: qf Simbolo: 0 Estado final: q0
+[Info] [24-10-21 18:53:41 ]:Datos del automata( El alfabeto: 0,1 El estado Inicial: r0 El estado final: rf AFD: 1)
+[Info] [24-10-21 18:53:49 ]:Transiciones del Automata(Estado base: r0 Simbolo: 0 Estado final: r1
+[Info] [24-10-21 18:54:02 ]:Transiciones del Automata(Estado base: r1 Simbolo: 1 Estado final: rf
+[Info] [24-10-21 18:54:07 ]:Transiciones del Automata(Estado base: rf Simbolo: 0 Estado final: r0

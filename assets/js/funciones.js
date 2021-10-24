@@ -129,7 +129,7 @@ export const union = () => {
       }
       if (element.label === con.to) {
         arista.to = element.id;
-        arista.label = element.label;
+        arista.label = con.label;
       }
     });
     edges.push(arista);
@@ -155,22 +155,22 @@ export const interseccion = () => {
   const edges = [];
 
   nodos.forEach((e, i) => {
-  nodos[i].id = i;
+    nodos[i].id = i;
   });
 
-  for(let i = 0; i < nodosA1.length; i++){
-    for(let j = 0; j < nodosA2.length; j++){
-      nodos.push(nodosA1[i]+nodosA2[j]);
+  for (let i = 0; i < nodosA1.length; i++) {
+    for (let j = 0; j < nodosA2.length; j++) {
+      nodos.push(nodosA1[i] + nodosA2[j]);
     }
   }
 
   let con = 0;
   let arista = {};
-  for(let i = 0; i < nodosA1.length; i++){
-    for(let j = 0; j < nodosA2.length; j++){
-      if(aristas1.size === aristas2.size){
+  for (let i = 0; i < nodosA1.length; i++) {
+    for (let j = 0; j < nodosA2.length; j++) {
+      if (aristas1.size === aristas2.size) {
         arista.id = con;
-        arista.label = aristas1.label+aristas2.label;
+        arista.label = aristas1.label + aristas2.label;
         arista.from = 0;
         arista.to = aristas1.to;
         con++;
@@ -186,4 +186,8 @@ export const interseccion = () => {
   const div2 = document.querySelector('#automataResultante');
 
   new vis.Network(div2, data2, options);
+};
+
+export const fuicionesNoListas = () => {
+  alert('Esta funcion no esta terminada');
 };
